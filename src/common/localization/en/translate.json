@@ -1,0 +1,30 @@
+{
+  "translations": {
+    "app-bar": {
+      "home": "Home",
+      "prices": "Prices",
+      "call-sales": "Call Sales",
+      "track_your_shipment": "Track Your Shipment",
+      "login": "Login"
+    },
+    "shipment-details": {
+      "shipment_number": "Shipment Number",
+      "last_update": "Last Update",
+      "merchant_name": "Merchant Name",
+      "delivery_due_in": "Delivery Due In",
+      "shipment_created": "Shipment Created",
+      "shipment_received_from_merchant": "Shipment Received From Merchant",
+      "shipment_out_for_delivery": "Shipment Out For Delivery",
+      "shipment_delivered": "Shipment Delivered",
+      "shipment_details": "Shipment Details",
+      "delivery_address": "Delivery Address",
+      "branch": "Branch",
+      "date": "Date",
+      "time": "Time",
+      "details": "Details",
+      "problem_in_shipment": "Is there a problem in your shipment?",
+      "report_a_problem": "Report a problem",
+      "not-found": "The tracking number record cannot be found at this time. Please check the number and try again later. For further assistance, please contact customer service."
+    }
+  }
+}

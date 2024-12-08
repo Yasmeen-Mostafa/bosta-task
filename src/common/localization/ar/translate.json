@@ -1,0 +1,30 @@
+{
+  "translations": {
+    "app-bar": {
+      "home": "الرئيسية",
+      "prices": "الأسعار",
+      "call-sales": "كلم المبيعات",
+      "track_your_shipment": "تتبع شحنتك",
+      "login": "تسجيل الدخول"
+    },
+    "shipment-details": {
+      "shipment_number": "رقم الشحنه",
+      "last_update": "اخر تحديث",
+      "merchant_name": "اسم التاجر",
+      "delivery_due_in": "موعد التسليم خلال",
+      "shipment_created": "تم انشاء الشحنه",
+      "shipment_received_from_merchant": "تم استلام الشحنه من التاجر",
+      "shipment_out_for_delivery": "الشحنه خرجت للتسليم",
+      "shipment_delivered": "تم التسليم",
+      "shipment_details": "تفاصيل الشحنه",
+      "delivery_address": "عنوان التسليم",
+      "branch": "الفرع",
+      "date": "التاريخ",
+      "time": "الوقت",
+      "details": "تفاصيل",
+      "problem_in_shipment": "هل يوجد مشكلة في شحنتك؟",
+      "report_a_problem": "الابلاغ عن مشكلة",
+      "not-found": "لا يمكن العثور على أي سجل لرقم التتبع هذا في الوقت الحالي ، يرجى التحقق من الرقم والمحاولة مرة أخرى لاحقًا. لمزيد من المساعدة ، يرجى التواصل بخدمة العملاء."
+    }
+  }
+}

@@ -1,0 +1,18 @@
+html {
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+.App {
+  text-align: center;
+  box-sizing: border-box;
+}
+html[lang="ar"] #root > * {
+  direction: rtl !important;
+  font-family: "Cairo", sans-serif !important;
+}
+
+html[lang="en"] #root > * {
+  direction: ltr !important;
+  font-family: "Poppins", sans-serif;
+}

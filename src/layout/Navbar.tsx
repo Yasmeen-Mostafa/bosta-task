@@ -10,7 +10,7 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import { useNavigate } from "react-router-dom";
-import ImagesSrc from "../utils/ImagesSrc";
+import ImagesSrc from "../common/utils/ImagesSrc";
 import { useTranslation } from "react-i18next";
 
 function ResponsiveAppBar() {

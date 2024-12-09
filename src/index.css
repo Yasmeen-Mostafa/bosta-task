@@ -7,7 +7,6 @@
 body {
   min-height: 100vh;
   position: relative;
-  padding: 0 !important;
 }
 
 body,
@@ -16,22 +15,26 @@ body,
   flex-direction: column;
   flex-grow: 1;
 }
+
 /* --------------- global scrollbar style---------------------------- */
-/* Track */
+
 ::-webkit-scrollbar-track {
   border-radius: 10px;
 }
+
 ::-webkit-scrollbar-thumb {
   background: #cfcfcf96;
   border-radius: 10px;
 }
+
 ::-webkit-scrollbar-corner {
   background-color: #fff !important;
 }
-/* Handle on hover */
+
 ::-webkit-scrollbar-thumb:hover {
   background: #727f8d;
 }
+
 ::-webkit-scrollbar {
   width: 7px;
   height: 6px !important;

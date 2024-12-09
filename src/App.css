@@ -8,11 +8,9 @@ html {
   box-sizing: border-box;
 }
 html[lang="ar"] #root > * {
-  direction: rtl !important;
-  font-family: "Cairo", sans-serif !important;
+  font-family: "Cairo", sans-serif;
 }
 
 html[lang="en"] #root > * {
-  direction: ltr !important;
   font-family: "Poppins", sans-serif;
 }

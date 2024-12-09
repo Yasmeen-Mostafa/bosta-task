@@ -3,7 +3,7 @@ import shipmentReducer from "./features/shipmentDetails/slice";
 
 const store = configureStore({
   reducer: {
-    shipment: shipmentReducer, // Add the shipment slice
+    shipment: shipmentReducer,
   },
 });
 

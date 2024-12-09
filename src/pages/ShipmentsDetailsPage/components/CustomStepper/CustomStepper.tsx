@@ -50,7 +50,7 @@ const CustomStepper = ({ codeNumber }: { codeNumber: number }) => {
     },
   ];
 
-  // Active step logic based on the codeNumber
+  // Active step based on the codeNumber
   const activeStep =
     codeNumber === statusCode.delivered
       ? shipmentDetails.length // All steps completed

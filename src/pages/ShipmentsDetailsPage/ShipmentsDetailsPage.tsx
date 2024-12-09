@@ -13,49 +13,45 @@ import {
 import { useParams } from "react-router-dom";
 import dayjs from "dayjs";
 import WarningIcon from "@mui/icons-material/Warning";
-import CustomStepper from "../../components/CustomStepper/CustomStepper";
+import CustomStepper from "./components/CustomStepper/CustomStepper";
 import ShipmentDetailsTable, {
   TableColumn,
-} from "../../components/ShipmentDetailsTable/ShipmentDetailsTable";
-import ImagesSrc from "../../utils/ImagesSrc";
+} from "./components/ShipmentDetailsTable/ShipmentDetailsTable";
+import ImagesSrc from "../../common/utils/ImagesSrc";
 import { useTranslation } from "react-i18next";
 import { useAppDispatch, useAppSelector } from "../../store/hooks";
 import { useEffect } from "react";
-import { fetchShipmentDetails } from "../../store/features/shipmentDetails/slice";
-import "dayjs/locale/ar"; // Import Arabic locale
+import "dayjs/locale/ar";
+import { fetchShipmentDetails } from "../../store/features/shipmentDetails/reducer";
 const ShipmentsDetailsPage = () => {
+  //Vars
   const dispatch = useAppDispatch();
-
   const { t, i18n } = useTranslation();
+  const isRtl = i18n.language === "ar";
   const { trackingNumber } = useParams();
   const { details, isLoading, error } = useAppSelector(
     (state) => state.shipment
   );
-  useEffect(() => {
-    dispatch(
-      fetchShipmentDetails({ id: Number(trackingNumber), lang: i18n.language })
-    ); // Fetch shipment with ID 123
-  }, [dispatch, trackingNumber, i18n]);
   const cardHeader = [
     {
       label: `${t("shipment-details.shipment_number")} ${trackingNumber}`,
-      value: details?.CurrentStatus?.state, // dynamic
+      value: details?.CurrentStatus?.state,
     },
     {
       label: t("shipment-details.last_update"),
       value: dayjs(details?.CreateDate)
         .locale(i18n.language)
-        .format("dddd DD MMMM YYYY HH:mm A"), // dynamic
+        .format("dddd DD MMMM YYYY HH:mm A"),
     },
     {
       label: t("shipment-details.merchant_name"),
-      value: "Test name", // dynamic
+      value: "Test name",
     },
     {
       label: t("shipment-details.delivery_due_in"),
       value: dayjs(details?.PromisedDate)
         .locale(i18n.language)
-        .format("DD MMMM YYYY"), // dynamic
+        .format("DD MMMM YYYY"),
     },
   ];
 
@@ -64,22 +60,22 @@ const ShipmentsDetailsPage = () => {
     {
       id: "branch",
       label: t("shipment-details.branch"),
-      align: i18n.language === "ar" ? "right" : "left",
+      align: isRtl ? "right" : "left",
     },
     {
       id: "date",
       label: t("shipment-details.date"),
-      align: i18n.language === "ar" ? "right" : "left",
+      align: isRtl ? "right" : "left",
     },
     {
       id: "time",
       label: t("shipment-details.time"),
-      align: i18n.language === "ar" ? "right" : "left",
+      align: isRtl ? "right" : "left",
     },
     {
       id: "details",
       label: t("shipment-details.details"),
-      align: i18n.language === "ar" ? "right" : "left",
+      align: isRtl ? "right" : "left",
     },
   ];
 
@@ -104,6 +100,12 @@ const ShipmentsDetailsPage = () => {
       details: t("shipment-details.shipment_created"),
     },
   ];
+
+  useEffect(() => {
+    dispatch(
+      fetchShipmentDetails({ id: Number(trackingNumber), lang: i18n.language })
+    );
+  }, [dispatch, trackingNumber, i18n]);
 
   return isLoading ? (
     <Stack
@@ -199,7 +201,6 @@ const ShipmentsDetailsPage = () => {
                   margin: "10px",
                 }}
               >
-                {" "}
                 <CardContent
                   sx={{
                     textAlign: "center",
